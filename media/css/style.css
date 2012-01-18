@@ -1,0 +1,214 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+ * TEXT
+ */
+
+p{
+	margin-bottom:1em;
+	font-size:1.1em;
+}
+
+h1{
+	font-size:3em;
+	margin-bottom:0.3em;
+}
+
+h2{
+	font-size:2em;
+	margin-bottom:0.4em;
+}
+
+h3{
+	font-size:1.6em;
+}
+
+select{
+	width:100%;
+	font-size:1.1em;
+	margin-bottom:1em;
+	padding:0.5em;
+}
+
+#searchInput{
+	width:55%;
+	font-size:1.1em;
+}
+
+#searchSubmitBtn{
+	width:35%;
+	font-size:1.1em;
+	float:right;
+}
+
+a#clearSearchResult{
+	margin-bottom:1em;
+	font-size:1.1em;
+	color:#ff0000;
+}
+
+ol li{
+	margin-bottom:1em;
+}
+
+.addFavorite{
+	text-align:right;
+}
+
+dt{
+	font-size:1.6em;
+}
+
+dd{
+	margin-bottom:2em;
+	border-bottom:1px dotted #ccc;
+}
+
+img {
+	vertical-align: middle;
+	margin-right:1em;
+}
+
+.temperature{
+	font-size:1.5em;
+	margin-right:2em;
+}
+
+.paginationLinkPrev{
+	float:left;
+	margin-top:1em;
+}
+
+.paginationLinkNext{
+	float:right;
+	margin-top:1em;
+}
+
+.detailsLink, .goBackLink, .paginationLinkPrev, .paginationLinkNext {
+	background: none repeat scroll 0 0 #E3E3E3;
+    border: 1px solid #BBBBBB;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 1px 1px #F6F6F6 inset;
+    color: #333333;
+    padding: 0.4em 1.5em;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-decoration:none;
+}
+
+.detailsLink:hover, .goBackLink:hover{
+	background:#e7e7e7;
+	color:#000;
+}
+
+#favorites li{
+	margin-bottom:1em;
+	line-height:3;
+	background:#e8e8e8;
+	border:1px solid #ddd;
+}
+
+.favoriteLink, .removeFavoriteLink{
+	padding:0.3em;
+}
+
+.removeFavoriteLink{
+	color:#ff0000;
+}
+
+a{
+	color:#333333;
+}
+
+a:hover, a:focus{
+	text-decoration:none;
+}
+
+
+/*
+ * GENERAL
+ */
+
+body{
+	background:url('bg.png');
+	font-family:Georgia;
+	line-height:1.5;
+	text-shadow: 2px 2px 0 rgba(255, 255, 255, 1);
+}
+
+.wrapper{
+	width:90%;
+	max-width:600px;
+	margin:0 auto;
+	padding:2% 1%;
+}
+
+#favorites{
+	margin-bottom:2em;
+}
+
+#searchForm{
+	margin-bottom:1em;
+}
+
+#searchResult{
+	margin:1em 0 2em 0;
+	padding:1em;
+	padding-bottom:5em;
+	border:1px dotted #ccc;
+}
+
+#forecast{
+	padding-top:3em;
+}
+
+.footer{
+	margin-top:3em;
+}

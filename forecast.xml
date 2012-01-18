@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weatherdata>
+  <location>
+    <name>Kalmar</name>
+    <type>Regional capital</type>
+    <country>Sweden</country>
+    <timezone id="Europe/Stockholm" utcoffsetMinutes="60"/>
+    <location altitude="6" latitude="56.66157" longitude="16.36163" geobase="geonames" geobaseid="2702261"/>
+  </location>
+  <credit>
+    <!--In order to use the free weather data from yr no, you HAVE to display 
+the following text clearly visible on your web page. The text should be a 
+link to the specified URL.-->
+    <!--Please read more about our conditions and guidelines at http://www.yr.no/verdata/ -->
+    <link text="Weather forecast from yr.no, delivered by the Norwegian Meteorological Institute and the NRK" url="http://www.yr.no/place/Sweden/Kalmar/Kalmar~2702261/"/>
+  </credit>
+  <links>
+    <link id="xmlSource" url="http://www.yr.no/place/Sweden/Kalmar/Kalmar~2702261/forecast.xml"/>
+    <link id="xmlSourceHourByHour" url="http://www.yr.no/place/Sweden/Kalmar/Kalmar~2702261/forecast_hour_by_hour.xml"/>
+    <link id="overview" url="http://www.yr.no/place/Sweden/Kalmar/Kalmar~2702261/"/>
+    <link id="hourByHour" url="http://www.yr.no/place/Sweden/Kalmar/Kalmar~2702261/hour_by_hour"/>
+    <link id="longTermForecast" url="http://www.yr.no/place/Sweden/Kalmar/Kalmar~2702261/long"/>
+    <link id="radar" url="http://www.yr.no/place/Sweden/Kalmar/Kalmar~2702261/radar.html"/>
+  </links>
+  <meta>
+    <lastupdate>2012-01-03T06:53:00</lastupdate>
+    <nextupdate>2012-01-03T19:00:00</nextupdate>
+  </meta>
+  <sun rise="2012-01-03T08:29:45" set="2012-01-03T15:28:03"/>
+  <forecast>
+    <tabular>
+      <time from="2012-01-03T18:00:00" to="2012-01-04T00:00:00" period="3">
+        <!-- Valid from 2012-01-03T18:00:00 to 2012-01-04T00:00:00 -->
+        <symbol number="10" name="Heavy rain" var="10"/>
+        <precipitation value="7.0" minvalue="5,5" maxvalue="7,8"/>
+        <!-- Valid at 2012-01-03T18:00:00 -->
+        <windDirection deg="184.4" code="S" name="South"/>
+        <windSpeed mps="15.5" name="Near gale"/>
+        <temperature unit="celsius" value="4"/>
+        <pressure unit="hPa" value="996.3"/>
+      </time>
+      <time from="2012-01-04T00:00:00" to="2012-01-04T06:00:00" period="0">
+        <!-- Valid from 2012-01-04T00:00:00 to 2012-01-04T06:00:00 -->
+        <symbol number="3" name="Partly cloudy" var="mf/03n.34"/>
+        <precipitation value="0.0" minvalue="0" maxvalue="0,5"/>
+        <!-- Valid at 2012-01-04T00:00:00 -->
+        <windDirection deg="217.8" code="SW" name="Southwest"/>
+        <windSpeed mps="9.6" name="Fresh breeze"/>
+        <temperature unit="celsius" value="4"/>
+        <pressure unit="hPa" value="986.6"/>
+      </time>
+      <time from="2012-01-04T06:00:00" to="2012-01-04T12:00:00" period="1">
+        <!-- Valid from 2012-01-04T06:00:00 to 2012-01-04T12:00:00 -->
+        <symbol number="3" name="Partly cloudy" var="03d"/>
+        <precipitation value="0.0" minvalue="0,1" maxvalue="0,2"/>
+        <!-- Valid at 2012-01-04T06:00:00 -->
+        <windDirection deg="228.9" code="SW" name="Southwest"/>
+        <windSpeed mps="14.5" name="Near gale"/>
+        <temperature unit="celsius" value="4"/>
+        <pressure unit="hPa" value="984.6"/>
+      </time>
+      <time from="2012-01-04T12:00:00" to="2012-01-04T18:00:00" period="2">
+        <!-- Valid from 2012-01-04T12:00:00 to 2012-01-04T18:00:00 -->
+        <symbol number="3" name="Partly cloudy" var="03d"/>
+        <precipitation value="0.0" minvalue="0,1" maxvalue="0,2"/>
+        <!-- Valid at 2012-01-04T12:00:00 -->
+        <windDirection deg="236.7" code="WSW" name="West-southwest"/>
+        <windSpeed mps="15.1" name="Near gale"/>
+        <temperature unit="celsius" value="4"/>
+        <pressure unit="hPa" value="983.0"/>
+      </time>
+      <time from="2012-01-04T18:00:00" to="2012-01-05T00:00:00" period="3">
+        <!-- Valid from 2012-01-04T18:00:00 to 2012-01-05T00:00:00 -->
+        <symbol number="2" name="Fair" var="mf/02n.34"/>
+        <precipitation value="0.0" minvalue="0" maxvalue="0,1"/>
+        <!-- Valid at 2012-01-04T18:00:00 -->
+        <windDirection deg="258.6" code="WSW" name="West-southwest"/>
+        <windSpeed mps="12.8" name="Strong breeze"/>
+        <temperature unit="celsius" value="5"/>
+        <pressure unit="hPa" value="987.8"/>
+      </time>
+      <time from="2012-01-05T00:00:00" to="2012-01-05T06:00:00" period="0">
+        <!-- Valid from 2012-01-05T00:00:00 to 2012-01-05T06:00:00 -->
+        <symbol number="3" name="Partly cloudy" var="mf/03n.37"/>
+        <precipitation value="0.0" minvalue="0" maxvalue="0,1"/>
+        <!-- Valid at 2012-01-05T00:00:00 -->
+        <windDirection deg="246.8" code="WSW" name="West-southwest"/>
+        <windSpeed mps="10.8" name="Strong breeze"/>
+        <temperature unit="celsius" value="3"/>
+        <pressure unit="hPa" value="988.2"/>
+      </time>
+      <time from="2012-01-05T06:00:00" to="2012-01-05T12:00:00" period="1">
+        <!-- Valid from 2012-01-05T06:00:00 to 2012-01-05T12:00:00 -->
+        <symbol number="9" name="Rain" var="09"/>
+        <precipitation value="1.6" minvalue="0,9" maxvalue="2,3"/>
+        <!-- Valid at 2012-01-05T06:00:00 -->
+        <windDirection deg="206.5" code="SSW" name="South-southwest"/>
+        <windSpeed mps="8.7" name="Fresh breeze"/>
+        <temperature unit="celsius" value="3"/>
+        <pressure unit="hPa" value="980.8"/>
+      </time>
+      <time from="2012-01-05T12:00:00" to="2012-01-05T18:00:00" period="2">
+        <!-- Valid from 2012-01-05T12:00:00 to 2012-01-05T18:00:00 -->
+        <symbol number="9" name="Rain" var="09"/>
+        <precipitation value="2.9" minvalue="1,8" maxvalue="4,0"/>
+        <!-- Valid at 2012-01-05T12:00:00 -->
+        <windDirection deg="187.0" code="S" name="South"/>
+        <windSpeed mps="6.9" name="Moderate breeze"/>
+        <temperature unit="celsius" value="3"/>
+        <pressure unit="hPa" value="969.9"/>
+      </time>
+      <time from="2012-01-05T19:00:00" to="2012-01-06T01:00:00" period="3">
+        <!-- Valid from 2012-01-05T19:00:00 to 2012-01-06T01:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.4"/>
+        <!-- Valid at 2012-01-05T19:00:00 -->
+        <windDirection deg="354.1" code="N" name="North"/>
+        <windSpeed mps="3.5" name="Gentle breeze"/>
+        <temperature unit="celsius" value="3"/>
+        <pressure unit="hPa" value="969.2"/>
+      </time>
+      <time from="2012-01-06T01:00:00" to="2012-01-06T07:00:00" period="0">
+        <!-- Valid from 2012-01-06T01:00:00 to 2012-01-06T07:00:00 -->
+        <symbol number="12" name="Sleet" var="12"/>
+        <precipitation value="1.8"/>
+        <!-- Valid at 2012-01-06T01:00:00 -->
+        <windDirection deg="328.3" code="NNW" name="North-northwest"/>
+        <windSpeed mps="2.4" name="Light breeze"/>
+        <temperature unit="celsius" value="2"/>
+        <pressure unit="hPa" value="975.2"/>
+      </time>
+      <time from="2012-01-06T07:00:00" to="2012-01-06T13:00:00" period="1">
+        <!-- Valid from 2012-01-06T07:00:00 to 2012-01-06T13:00:00 -->
+        <symbol number="1" name="Fair" var="01d"/>
+        <precipitation value="0.4"/>
+        <!-- Valid at 2012-01-06T07:00:00 -->
+        <windDirection deg="359.2" code="N" name="North"/>
+        <windSpeed mps="7.8" name="Moderate breeze"/>
+        <temperature unit="celsius" value="1"/>
+        <pressure unit="hPa" value="990.1"/>
+      </time>
+      <time from="2012-01-06T13:00:00" to="2012-01-06T19:00:00" period="2">
+        <!-- Valid from 2012-01-06T13:00:00 to 2012-01-06T19:00:00 -->
+        <symbol number="1" name="Fair" var="01d"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-06T13:00:00 -->
+        <windDirection deg="345.7" code="NNW" name="North-northwest"/>
+        <windSpeed mps="5.9" name="Moderate breeze"/>
+        <temperature unit="celsius" value="-1"/>
+        <pressure unit="hPa" value="1001.9"/>
+      </time>
+      <time from="2012-01-06T19:00:00" to="2012-01-07T01:00:00" period="3">
+        <!-- Valid from 2012-01-06T19:00:00 to 2012-01-07T01:00:00 -->
+        <symbol number="3" name="Partly cloudy" var="mf/03n.41"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-06T19:00:00 -->
+        <windDirection deg="329.3" code="NNW" name="North-northwest"/>
+        <windSpeed mps="2.9" name="Light breeze"/>
+        <temperature unit="celsius" value="-3"/>
+        <pressure unit="hPa" value="1008.4"/>
+      </time>
+      <time from="2012-01-07T01:00:00" to="2012-01-07T07:00:00" period="0">
+        <!-- Valid from 2012-01-07T01:00:00 to 2012-01-07T07:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-07T01:00:00 -->
+        <windDirection deg="277.5" code="W" name="West"/>
+        <windSpeed mps="2.5" name="Light breeze"/>
+        <temperature unit="celsius" value="-3"/>
+        <pressure unit="hPa" value="1010.2"/>
+      </time>
+      <time from="2012-01-07T07:00:00" to="2012-01-07T13:00:00" period="1">
+        <!-- Valid from 2012-01-07T07:00:00 to 2012-01-07T13:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.3"/>
+        <!-- Valid at 2012-01-07T07:00:00 -->
+        <windDirection deg="228.2" code="SW" name="Southwest"/>
+        <windSpeed mps="2.7" name="Light breeze"/>
+        <temperature unit="celsius" value="-2"/>
+        <pressure unit="hPa" value="1008.0"/>
+      </time>
+      <time from="2012-01-07T13:00:00" to="2012-01-07T19:00:00" period="2">
+        <!-- Valid from 2012-01-07T13:00:00 to 2012-01-07T19:00:00 -->
+        <symbol number="9" name="Rain" var="09"/>
+        <precipitation value="1.5"/>
+        <!-- Valid at 2012-01-07T13:00:00 -->
+        <windDirection deg="204.3" code="SSW" name="South-southwest"/>
+        <windSpeed mps="4.2" name="Gentle breeze"/>
+        <temperature unit="celsius" value="3"/>
+        <pressure unit="hPa" value="1002.7"/>
+      </time>
+      <time from="2012-01-07T19:00:00" to="2012-01-08T01:00:00" period="3">
+        <!-- Valid from 2012-01-07T19:00:00 to 2012-01-08T01:00:00 -->
+        <symbol number="9" name="Rain" var="09"/>
+        <precipitation value="0.8"/>
+        <!-- Valid at 2012-01-07T19:00:00 -->
+        <windDirection deg="185.9" code="S" name="South"/>
+        <windSpeed mps="4.1" name="Gentle breeze"/>
+        <temperature unit="celsius" value="2"/>
+        <pressure unit="hPa" value="999.4"/>
+      </time>
+      <time from="2012-01-08T01:00:00" to="2012-01-08T07:00:00" period="0">
+        <!-- Valid from 2012-01-08T01:00:00 to 2012-01-08T07:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-08T01:00:00 -->
+        <windDirection deg="241.6" code="WSW" name="West-southwest"/>
+        <windSpeed mps="2.3" name="Light breeze"/>
+        <temperature unit="celsius" value="2"/>
+        <pressure unit="hPa" value="999.9"/>
+      </time>
+      <time from="2012-01-08T07:00:00" to="2012-01-08T13:00:00" period="1">
+        <!-- Valid from 2012-01-08T07:00:00 to 2012-01-08T13:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-08T07:00:00 -->
+        <windDirection deg="280.5" code="W" name="West"/>
+        <windSpeed mps="2.4" name="Light breeze"/>
+        <temperature unit="celsius" value="2"/>
+        <pressure unit="hPa" value="1001.8"/>
+      </time>
+      <time from="2012-01-08T13:00:00" to="2012-01-08T19:00:00" period="2">
+        <!-- Valid from 2012-01-08T13:00:00 to 2012-01-08T19:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.3"/>
+        <!-- Valid at 2012-01-08T13:00:00 -->
+        <windDirection deg="341.7" code="NNW" name="North-northwest"/>
+        <windSpeed mps="2.5" name="Light breeze"/>
+        <temperature unit="celsius" value="2"/>
+        <pressure unit="hPa" value="1005.9"/>
+      </time>
+      <time from="2012-01-08T19:00:00" to="2012-01-09T01:00:00" period="3">
+        <!-- Valid from 2012-01-08T19:00:00 to 2012-01-09T01:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.4"/>
+        <!-- Valid at 2012-01-08T19:00:00 -->
+        <windDirection deg="349.7" code="N" name="North"/>
+        <windSpeed mps="3.7" name="Gentle breeze"/>
+        <temperature unit="celsius" value="2"/>
+        <pressure unit="hPa" value="1011.3"/>
+      </time>
+      <time from="2012-01-09T01:00:00" to="2012-01-09T07:00:00" period="0">
+        <!-- Valid from 2012-01-09T01:00:00 to 2012-01-09T07:00:00 -->
+        <symbol number="9" name="Rain" var="09"/>
+        <precipitation value="0.7"/>
+        <!-- Valid at 2012-01-09T01:00:00 -->
+        <windDirection deg="348.1" code="NNW" name="North-northwest"/>
+        <windSpeed mps="4.3" name="Gentle breeze"/>
+        <temperature unit="celsius" value="2"/>
+        <pressure unit="hPa" value="1016.3"/>
+      </time>
+      <time from="2012-01-09T07:00:00" to="2012-01-09T13:00:00" period="1">
+        <!-- Valid from 2012-01-09T07:00:00 to 2012-01-09T13:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.4"/>
+        <!-- Valid at 2012-01-09T07:00:00 -->
+        <windDirection deg="16.3" code="NNE" name="North-northeast"/>
+        <windSpeed mps="3.1" name="Light breeze"/>
+        <temperature unit="celsius" value="2"/>
+        <pressure unit="hPa" value="1021.2"/>
+      </time>
+      <time from="2012-01-09T13:00:00" to="2012-01-09T19:00:00" period="2">
+        <!-- Valid from 2012-01-09T13:00:00 to 2012-01-09T19:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-09T13:00:00 -->
+        <windDirection deg="7.3" code="N" name="North"/>
+        <windSpeed mps="2.8" name="Light breeze"/>
+        <temperature unit="celsius" value="1"/>
+        <pressure unit="hPa" value="1024.9"/>
+      </time>
+      <time from="2012-01-09T19:00:00" to="2012-01-10T01:00:00" period="3">
+        <!-- Valid from 2012-01-09T19:00:00 to 2012-01-10T01:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-09T19:00:00 -->
+        <windDirection deg="187.9" code="S" name="South"/>
+        <windSpeed mps="1.6" name="Light breeze"/>
+        <temperature unit="celsius" value="0"/>
+        <pressure unit="hPa" value="1026.0"/>
+      </time>
+      <time from="2012-01-10T01:00:00" to="2012-01-10T07:00:00" period="0">
+        <!-- Valid from 2012-01-10T01:00:00 to 2012-01-10T07:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-10T01:00:00 -->
+        <windDirection deg="232.1" code="SW" name="Southwest"/>
+        <windSpeed mps="3.0" name="Light breeze"/>
+        <temperature unit="celsius" value="1"/>
+        <pressure unit="hPa" value="1025.1"/>
+      </time>
+      <time from="2012-01-10T07:00:00" to="2012-01-10T13:00:00" period="1">
+        <!-- Valid from 2012-01-10T07:00:00 to 2012-01-10T13:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-10T07:00:00 -->
+        <windDirection deg="222.2" code="SW" name="Southwest"/>
+        <windSpeed mps="3.9" name="Gentle breeze"/>
+        <temperature unit="celsius" value="0"/>
+        <pressure unit="hPa" value="1021.9"/>
+      </time>
+      <time from="2012-01-10T13:00:00" to="2012-01-10T19:00:00" period="2">
+        <!-- Valid from 2012-01-10T13:00:00 to 2012-01-10T19:00:00 -->
+        <symbol number="9" name="Rain" var="09"/>
+        <precipitation value="1.3"/>
+        <!-- Valid at 2012-01-10T13:00:00 -->
+        <windDirection deg="206.2" code="SSW" name="South-southwest"/>
+        <windSpeed mps="5.8" name="Moderate breeze"/>
+        <temperature unit="celsius" value="3"/>
+        <pressure unit="hPa" value="1016.3"/>
+      </time>
+      <time from="2012-01-10T19:00:00" to="2012-01-11T01:00:00" period="3">
+        <!-- Valid from 2012-01-10T19:00:00 to 2012-01-11T01:00:00 -->
+        <symbol number="3" name="Partly cloudy" var="mf/03n.54"/>
+        <precipitation value="0.5"/>
+        <!-- Valid at 2012-01-10T19:00:00 -->
+        <windDirection deg="215.7" code="SW" name="Southwest"/>
+        <windSpeed mps="5.9" name="Moderate breeze"/>
+        <temperature unit="celsius" value="3"/>
+        <pressure unit="hPa" value="1010.0"/>
+      </time>
+      <time from="2012-01-11T01:00:00" to="2012-01-11T07:00:00" period="0">
+        <!-- Valid from 2012-01-11T01:00:00 to 2012-01-11T07:00:00 -->
+        <symbol number="2" name="Fair" var="mf/02n.58"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-11T01:00:00 -->
+        <windDirection deg="262.2" code="W" name="West"/>
+        <windSpeed mps="5.8" name="Moderate breeze"/>
+        <temperature unit="celsius" value="2"/>
+        <pressure unit="hPa" value="1007.7"/>
+      </time>
+      <time from="2012-01-11T07:00:00" to="2012-01-11T13:00:00" period="1">
+        <!-- Valid from 2012-01-11T07:00:00 to 2012-01-11T13:00:00 -->
+        <symbol number="1" name="Fair" var="01d"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-11T07:00:00 -->
+        <windDirection deg="274.6" code="W" name="West"/>
+        <windSpeed mps="2.9" name="Light breeze"/>
+        <temperature unit="celsius" value="1"/>
+        <pressure unit="hPa" value="1007.6"/>
+      </time>
+      <time from="2012-01-11T13:00:00" to="2012-01-11T19:00:00" period="2">
+        <!-- Valid from 2012-01-11T13:00:00 to 2012-01-11T19:00:00 -->
+        <symbol number="2" name="Fair" var="02d"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-11T13:00:00 -->
+        <windDirection deg="287.5" code="WNW" name="West-northwest"/>
+        <windSpeed mps="3.6" name="Gentle breeze"/>
+        <temperature unit="celsius" value="2"/>
+        <pressure unit="hPa" value="1011.5"/>
+      </time>
+      <time from="2012-01-11T19:00:00" to="2012-01-12T01:00:00" period="3">
+        <!-- Valid from 2012-01-11T19:00:00 to 2012-01-12T01:00:00 -->
+        <symbol number="1" name="Fair" var="mf/01n.58"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-11T19:00:00 -->
+        <windDirection deg="288.6" code="WNW" name="West-northwest"/>
+        <windSpeed mps="2.2" name="Light breeze"/>
+        <temperature unit="celsius" value="0"/>
+        <pressure unit="hPa" value="1014.6"/>
+      </time>
+      <time from="2012-01-12T01:00:00" to="2012-01-12T07:00:00" period="0">
+        <!-- Valid from 2012-01-12T01:00:00 to 2012-01-12T07:00:00 -->
+        <symbol number="1" name="Fair" var="mf/01n.61"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-12T01:00:00 -->
+        <windDirection deg="314.0" code="NW" name="Northwest"/>
+        <windSpeed mps="2.5" name="Light breeze"/>
+        <temperature unit="celsius" value="0"/>
+        <pressure unit="hPa" value="1018.6"/>
+      </time>
+      <time from="2012-01-12T07:00:00" to="2012-01-12T13:00:00" period="1">
+        <!-- Valid from 2012-01-12T07:00:00 to 2012-01-12T13:00:00 -->
+        <symbol number="1" name="Fair" var="01d"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-12T07:00:00 -->
+        <windDirection deg="296.2" code="WNW" name="West-northwest"/>
+        <windSpeed mps="2.3" name="Light breeze"/>
+        <temperature unit="celsius" value="-2"/>
+        <pressure unit="hPa" value="1021.5"/>
+      </time>
+      <time from="2012-01-12T13:00:00" to="2012-01-12T19:00:00" period="2">
+        <!-- Valid from 2012-01-12T13:00:00 to 2012-01-12T19:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-12T13:00:00 -->
+        <windDirection deg="252.6" code="WSW" name="West-southwest"/>
+        <windSpeed mps="2.7" name="Light breeze"/>
+        <temperature unit="celsius" value="2"/>
+        <pressure unit="hPa" value="1022.3"/>
+      </time>
+      <time from="2012-01-12T19:00:00" to="2012-01-13T01:00:00" period="3">
+        <!-- Valid from 2012-01-12T19:00:00 to 2012-01-13T01:00:00 -->
+        <symbol number="4" name="Cloudy" var="04"/>
+        <precipitation value="0.0"/>
+        <!-- Valid at 2012-01-12T19:00:00 -->
+        <windDirection deg="247.2" code="WSW" name="West-southwest"/>
+        <windSpeed mps="2.8" name="Light breeze"/>
+        <temperature unit="celsius" value="2"/>
+        <pressure unit="hPa" value="1021.3"/>
+      </time>
+    </tabular>
+  </forecast>
+</weatherdata>
