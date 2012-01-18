@@ -2,16 +2,12 @@
 
 class Model_Forecastmodel extends Model
 {
-    public function get_xml($country, $region, $city)
+    public function get_xml(Location $location)
     {
-    	/*
-		 * TODO Validate country, region and city before adding them to url
-		 */
-		
-		$country = rawurlencode($country);
-		$region = rawurlencode($region);
-		$city = rawurlencode($city);
-     	$url = "http://www.yr.no/place/$country/$region/$city/forecast.xml";   	
+		$location->country = rawurlencode($location->country);
+		$location->region = rawurlencode($location->region);
+		$location->city = rawurlencode($location->city);
+     	$url = "http://www.yr.no/place/$location->country/$location->region/$location->city/forecast.xml";   	
 		
 		try
 		{
@@ -44,9 +40,7 @@ class Model_Forecastmodel extends Model
 		//Request could not be created or executed
 		catch(Request_Exception $e)
 		{
-			/*
-			 * TODO Ordentligt felmeddelande
-			 */	
+			Kohana::$log->add(Log::ERROR, $e->getMessage());
 			return false;
 		}
     }

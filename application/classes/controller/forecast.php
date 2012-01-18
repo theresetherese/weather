@@ -7,34 +7,36 @@
 
 class Controller_Forecast extends Controller {
 	
+	
 	public function action_index()
 	{		
 		//Create forecastehandler
 		$fHandler = Model::factory('forecasthandler');
 		
 		//Retrieve request params
-		$country = $this->request->param('country');
-		$region = $this->request->param('region');
-		$city = $this->request->param('city');
+		$location = new Location();
+		$location->country = $this->request->param('country');
+		$location->region = $this->request->param('region');
+		$location->city = $this->request->param('city');
+		
 		$date = $this->request->param('date');
 		$period = $this->request->param('period');
 		$json = $this->request->param('json');
 		
+		
 		//Control that city, region and country is returned correctly.
-		if(!is_null($city) AND !is_null($region) AND !is_null($country))
+		if(!is_null($location->city) AND !is_null($location->region) AND !is_null($location->country))
 		{
 			//Check if data is cached, else request new data and cache it
-			if($xml = $this->get_xml($country, $region, $city))
+			if($xml = $this->get_xml($location))
 			{
 				//If date and period is set, then call for a detailed forecast object
 				if(!is_null($date) AND !is_null($period))
 				{
 					//Send xml to handler and create objects
 					$fObjects = $fHandler->get_detailed_forecast_object($xml, $date, $period);
-					/*
-					 * TODO Check if fObject really contains the right objects
-					 */
 					
+					//Respond with an html view or JSON
 					if(is_null($json) OR empty($json))
 					{
 						//Create view
@@ -58,10 +60,8 @@ class Controller_Forecast extends Controller {
 				{
 					//Send xml to handler and create objects
 					$fObjects = $fHandler->get_default_forecast_objects($xml);
-					/*
-					 * TODO Check if fObjects really contains the right objects
-					 */
-						
+					
+					//Respond with an html view or JSON	
 					if(is_null($json) OR empty($json))
 					{
 						//Create view
@@ -76,10 +76,10 @@ class Controller_Forecast extends Controller {
 				
 				//Bind forecastobjects and location to the view
 				$view->forecasts = $fObjects;
-				$view->country = $country;
-				$view->region = $region;
-				$view->city = $city;
-		
+				$view->country = urldecode($location->country);
+				$view->region = urldecode($location->region);
+				$view->city = urldecode($location->city);
+				
 				//Add view to template
 				$this->response->status(200);
 				$this->response->body($view);
@@ -93,7 +93,7 @@ class Controller_Forecast extends Controller {
 	
 			}
 		}
-		//Country, region or city is == null
+		//Country, region or city is null
 		else
 		{
 			$this->response->status(400);
@@ -102,48 +102,55 @@ class Controller_Forecast extends Controller {
 	}
 
 
-
-	public function createDetailedJson(Forecast_Detailed $f){
-		
+	/*
+	 * Create JSON from a detailed forecast-object
+	 */
+	public function createDetailedJson(Forecast_Detailed $f)
+	{		
 		$tempArray = array();
 		
-		$tempArray['fromTime'] = (int)$f->getFromTime();
-		$tempArray['toTime'] = (int)$f->getToTime();
-		$tempArray['period'] = (int)$f->getPeriod();
-		$tempArray['symbol'] = (int)$f->getSymbol();
-		$tempArray['symbolName'] = (string)$f->getSymbolName();
-		$tempArray['temperature'] = (int)$f->getTemperature();
-		$tempArray['precipitation'] = (int)$f->getPrecipitation();
-		$tempArray['windDirectionDegrees'] = (double)$f->getWindDirectionDeg();
-		$tempArray['windDirection'] = (string)$f->getWindDirection();
-		$tempArray['windSpeed'] = (double)$f->getWindSpeed();
-		$tempArray['pressure'] = (double)$f->getPressure();
+		$tempArray['fromTime'] = (int)$f->fromTime;
+		$tempArray['toTime'] = (int)$f->toTime;
+		$tempArray['period'] = (int)$f->period;
+		$tempArray['symbol'] = (int)$f->symbol;
+		$tempArray['symbolName'] = (string)$f->symbolName;
+		$tempArray['temperature'] = (int)$f->temperature;
+		$tempArray['precipitation'] = (int)$f->precipitation;
+		$tempArray['windDirectionDegrees'] = (double)$f->windDirectionDeg;
+		$tempArray['windDirection'] = (string)$f->windDirection;
+		$tempArray['windSpeed'] = (double)$f->windSpeed;
+		$tempArray['pressure'] = (double)$f->pressure;
 		
 		return json_encode($tempArray);
 			
 	}
 	
-	public function createDefaultJson($fObjects){
-		
+	/*
+	 * Create JSON from multiple forecast-objects
+	 */
+	public function createDefaultJson($fObjects)
+	{		
 		$jsonObjects = array();
 		$tempArray = array();
 		foreach ($fObjects as $f) {	
-			$tempArray['fromTime'] = (int)$f->getFromTime();
-			$tempArray['toTime'] = (int)$f->getToTime();
-			$tempArray['period'] = (int)$f->getPeriod();
-			$tempArray['symbol'] = (int)$f->getSymbol();
-			$tempArray['symbolName'] = (string)$f->getSymbolName();
-			$tempArray['temperature'] = (int)$f->getTemperature();
-			
+			$tempArray['fromTime'] = (int)$f->fromTime;
+			$tempArray['toTime'] = (int)$f->toTime;
+			$tempArray['period'] = (int)$f->period;
+			$tempArray['symbol'] = (int)$f->symbol;
+			$tempArray['symbolName'] = (string)$f->symbolName;
+			$tempArray['temperature'] = (int)$f->temperature;
+				
 			array_push($jsonObjects, $tempArray);
 		}
 		return json_encode($jsonObjects);
 			
 	}
-
-
-
-	public function get_xml($country, $region, $city)
+	
+	/*
+	 * Check if forecast is cached
+	 * Retrieve xml from cache or call handler for a new request to YR.no
+	 */
+	public function get_xml(Location $location)
 	{
 		// Check for the existance of the cache driver
 		if(isset(Cache::$instances['file']))
@@ -158,21 +165,22 @@ class Controller_Forecast extends Controller {
 		}
 		
 		//Check for cached xml
-		if ($xml = Cache::instance('file')->get("$country/$region/$city", FALSE))
-		{			
+		if ($xml = $memcache->get("$location->country/$location->region/$location->city", FALSE))
+		{
+		    	
 		    return $xml;
 		}
 		else
 		{
 		     $fHandler = Model::factory('forecasthandler');
-			 $xml = $fHandler->get_xml($country, $region, $city);
-			 
+			 $xml = $fHandler->get_xml($location);	
+			 	
 			 //Find out how many seconds until midnigt
 			 $tomorrowMidnight = mktime(0, 0, 0, date('n'), date('j') + 1);
 			 $now = time();
 			 $seconds = $tomorrowMidnight - $now;
-			 
-			 Cache::instance('file')->set("$country/$region/$city", $xml, $seconds);
+			 //Save in cache
+			 $memcache->set("$location->country/$location->region/$location->city", $xml, $seconds);
 			 return $xml;
 		}
 	}

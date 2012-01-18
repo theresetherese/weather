@@ -4,24 +4,24 @@ class Model_Searchmodel extends Model
 {
     public function get_location(Location $location, $page)
     {
-     	if($location->getLat() AND $location->getLong())
+     	if($location->lat AND $location->long)
      	{
-     		$lat = $location->getLat();
-			$long = $location->getLong();	
+     		$lat = $location->lat;
+			$long = $location->long;	
      		$url = "http://api.geonames.org/findNearbyPlaceName?lat=$lat&lng=$long&username=ts222ay&style=FULL";   	
 		}
-		else if($location->getCity())
+		else if($location->city)
 		{
 			$maxRows = 10;
-			$city = $location->getCity();
+			$city = $location->city;
 					
 			if($page != 0)
 			{
 				$startFrom = $maxRows * $page;
-				$url = "http://api.geonames.org/search?q=$city&maxRows=$maxRows&style=full&username=ts222ay&featureClass=P&startRow=$startFrom";
+				$url = "http://api.geonames.org/search?name=$city&maxRows=$maxRows&style=full&username=ts222ay&featureClass=P&startRow=$startFrom";
 			}	
 			else{
-				$url = "http://api.geonames.org/search?q=$city&maxRows=$maxRows&style=full&username=ts222ay&featureClass=P";
+				$url = "http://api.geonames.org/search?name=$city&maxRows=$maxRows&style=full&username=ts222ay&featureClass=P";
 			}
 			
 			
@@ -29,6 +29,7 @@ class Model_Searchmodel extends Model
 		else{
 			return false;
 		}
+		
 		try
 		{
 			//Create request instance	
@@ -60,9 +61,7 @@ class Model_Searchmodel extends Model
 		//Request could not be created or executed
 		catch(Request_Exception $e)
 		{
-			/*
-			 * TODO Ordentligt felmeddelande
-			 */	
+			Kohana::$log->add(Log::ERROR, $e->getMessage());
 			return false;
 		}
     }

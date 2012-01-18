@@ -9,49 +9,17 @@ class Forecast_Detailed extends Forecast_Default
 	private $pressure = NULL;
 	
 	
-	/*
-	 * GETTERS & SETTERS
-	 */
-	
-	public function getPrecipitation(){
-		return $this->precipitation;
-	}
-
-	public function setPrecipitation($_precipitation){
-		$this->precipitation = $_precipitation;
-	}
-
-	public function getWindDirection(){
-		return $this->windDirection;
-	}
-
-	public function setWindDirection($_windDirection){
-		$this->windDirection = $_windDirection;
-	}
-
-	public function getWindDirectionDeg(){
-		return $this->windDirectionDeg;
-	}
-
-	public function setWindDirectionDeg($_windDirectionDeg){
-		$this->windDirectionDeg = $_windDirectionDeg;
+	public function __get($prop)
+	{
+		if(isset($prop))
+		{	
+			return $this->$prop;
+		}
 	}
 	
-	public function getWindSpeed(){
-		return $this->windSpeed;
+	public function __set($prop, $value)
+	{
+		$this->$prop = HTML::chars($value);
 	}
-
-	public function setWindSpeed($_windSpeed){
-		$this->windSpeed = $_windSpeed;
-	}
-
-	public function getPressure(){
-		return $this->pressure;
-	}
-
-	public function setPressure($_pressure){
-		$this->pressure = $_pressure;
-	}
-
 	
 }

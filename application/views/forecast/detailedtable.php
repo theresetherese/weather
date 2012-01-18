@@ -1,24 +1,24 @@
 <h2 id="forecastTitle"><?php echo Text::ucfirst($city) . ', ' . Text::ucfirst($region) . ', ' . Text::ucfirst($country); ?></h2>
 <?php 
-	$date = date('l', $forecasts->getFromTime());
-	$fromTime = date('H:i', $forecasts->getFromTime());
-	$toTime = date('H:i', $forecasts->getToTime());
+	$date = date('l', $forecasts->fromTime);
+	$fromTime = date('H:i', $forecasts->fromTime);
+	$toTime = date('H:i', $forecasts->toTime);
 ?>
 
 <h3><?php echo "$date, $fromTime - $toTime"; ?></h3>
 <table>
 	
 	<?php 
-			$period = $forecasts->getPeriod();
-			$symbol = $forecasts->getSymbol();
+			$period = $forecasts->period;
+			$symbol = $forecasts->symbol;
 			$newsymbol = $symbol;
-			$symbolName = $forecasts->getSymbolName();
-			$temperature = $forecasts->getTemperature();
-			$precipitation = $forecasts->getPrecipitation();
-			$pressure = $forecasts->getPressure();
-			$windDirectionDeg = $forecasts->getWindDirectionDeg();
-			$windDirection = $forecasts->getWindDirection();
-			$windSpeed = $forecasts->getWindSpeed();
+			$symbolName = $forecasts->symbolName;
+			$temperature = $forecasts->temperature;
+			$precipitation = $forecasts->precipitation;
+			$pressure = $forecasts->pressure;
+			$windDirectionDeg = $forecasts->windDirectionDeg;
+			$windDirection = $forecasts->windDirection;
+			$windSpeed = $forecasts->windSpeed;
 
 			if($symbol < 10)
 			{

@@ -46,4 +46,4 @@ class Controller_Index extends Controller_Template {
 		parent::after();
 	}
 
-}// End Welcome
+}

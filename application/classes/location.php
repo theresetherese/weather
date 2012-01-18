@@ -9,43 +9,17 @@ class Location
 	private $long = NULL;
 	
 	
-	public function getCity(){
-		return $this->city;
+	public function __get($prop)
+	{
+		if(isset($prop))
+		{	
+			return $this->$prop;
+		}
 	}
-
-	public function setCity($_city){
-		$this->city = $_city;
+	
+	public function __set($prop, $value)
+	{
+		$value = strip_tags($value);	
+		$this->$prop = HTML::chars($value);
 	}
-
-	public function getRegion(){
-		return $this->region;
-	}
-
-	public function setRegion($_region){
-		$this->region = $_region;
-	}
-
-	public function getCountry(){
-		return $this->country;
-	}
-
-	public function setCountry($_country){
-		$this->country = $_country;
-	}
-
-	public function getLat(){
-		return $this->lat;
-	}
-
-	public function setLat($_lat){
-		$this->lat = $_lat;
-	}
-
-	public function getLong(){
-		return $this->long;
-	}
-
-	public function setLong($_long){
-		$this->long = $_long;
-	}	
 }

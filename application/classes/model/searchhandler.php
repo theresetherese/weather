@@ -32,13 +32,7 @@ class Model_Searchhandler extends Model
 		
 		if($object = $simplexml->xpath('//geoname'))
 		{
-			$location = new Location();
-			$location->setCity((string)$object[0]->name);
-			$location->setRegion((string)$object[0]->adminName1);
-			$location->setCountry((string)$object[0]->countryName);
-			$location->setLat((float)$object[0]->lat);
-			$location->setLong((float)$object[0]->lng);
-			return $location;
+			return $this->setLocation($object);
 		}
 		return false;
 	}
@@ -48,17 +42,12 @@ class Model_Searchhandler extends Model
 		$simplexml = simplexml_load_string($xml);
 		$totalcount = $simplexml->xpath('totalResultsCount');
 		
-		if($totalcount[0] > 0)
+		if($totalcount > 0)
 		{
 			$objects = $simplexml->xpath('//geoname');
 			$locations = array();
 			foreach ($objects as $object) {
-				$location = new Location();
-				$location->setCity((string)$object->name);
-				$location->setRegion((string)$object->adminName1);
-				$location->setCountry((string)$object->countryName);
-				$location->setLat((float)$object->lat);
-				$location->setLong((float)$object->lng);
+				$location = $this->setLocation($object);
 				array_push($locations, $location);
 			}
 			return $locations;
@@ -67,5 +56,17 @@ class Model_Searchhandler extends Model
 		{
 			return false;
 		}
+	}
+	
+	public function setLocation($object)
+	{
+		$location = new Location();
+		$location->city = (string)$object[0]->name;
+		$location->region = (string)$object[0]->adminName1;
+		$location->country = (string)$object[0]->countryName;
+		$location->lat = (float)$object[0]->lat;
+		$location->long = (float)$object[0]->lng;
+		
+		return $location;
 	}
 }

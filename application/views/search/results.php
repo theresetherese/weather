@@ -2,9 +2,9 @@
 	<?php
 	
 		foreach ($locations as $location) {
-			$city = $location->getCity();
-			$region = $location->getRegion();
-			$country = $location->getCountry();
+			$city = $location->city;
+			$region = $location->region;
+			$country = $location->country;
 			
 			echo "<li><a href='#' class='chooseLocationLink' id='$country/$region/$city'>$city, $region, $country</a>";
 		}

@@ -94,6 +94,7 @@ var loadSearchResults = function(_s){
 
 var errorSearchMessage = function(message){
 	$('#searchResult').empty();
+	$('#searchForm').after('<div id="searchResult"></div>');
 	$('#searchResult').append(message);
 };
 

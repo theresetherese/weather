@@ -4,12 +4,12 @@
 	<?php 
 		foreach ($forecasts as $f)
 		{
-			$date = date('l', $f->getFromTime());
-			$fulldate = date('Ymd', $f->getFromTime());
-			$fromTime = date('H:i', $f->getFromTime());
-			$toTime = date('H:i', $f->getToTime());
-			$period = $f->getPeriod();
-			$symbol = $f->getSymbol();
+			$date = date('l', $f->fromTime);
+			$fulldate = date('Ymd', $f->fromTime);
+			$fromTime = date('H:i', $f->fromTime);
+			$toTime = date('H:i', $f->toTime);
+			$period = $f->period;
+			$symbol = $f->symbol;
 			$newsymbol = $symbol;
 
 			if($symbol < 10)
@@ -31,8 +31,8 @@
 			
 			$symbol = $newsymbol;
 			
-			$symbolName = $f->getSymbolName();
-			$temperature = $f->getTemperature();
+			$symbolName = $f->symbolName;
+			$temperature = $f->temperature;
 			echo "
 				<dt>$date $fromTime - $toTime</dt>
 				<dd><p><img src='" . URL::base('http') . "media/icons/$symbol.png' alt='$symbolName' /> <span class='temperature'>$temperature &deg; C</span><a href='#' id='$country/$region/$city/$fulldate/$period' class='detailsLink'>Details</a></p></dd>
